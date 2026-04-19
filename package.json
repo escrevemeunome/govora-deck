@@ -1,0 +1,29 @@
+{
+  "name": "govora-deck",
+  "version": "1.0.0",
+  "description": "Govora RelGov – Apresentação animada com Remotion",
+  "scripts": {
+    "start": "remotion studio",
+    "build": "remotion render GovDeck out/govora-relgov.mp4 --gl=angle",
+    "render:gif": "remotion render GovDeck out/govora-relgov.gif",
+    "render:webm": "remotion render GovDeck out/govora-relgov.webm --codec=vp8",
+    "deploy": "remotion deploy",
+    "still": "remotion still GovDeck --frame=0 out/cover.png"
+  },
+  "dependencies": {
+    "@remotion/player": "^4.0.290",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remotion": "^4.0.290"
+  },
+  "devDependencies": {
+    "@remotion/bundler": "^4.0.290",
+    "@remotion/renderer": "^4.0.290",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.0.0"
+  },
+  "remotion": {
+    "entryPoint": "src/index.ts"
+  }
+}
